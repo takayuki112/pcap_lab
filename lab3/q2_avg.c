@@ -19,7 +19,7 @@ int main(int argc, char* argv[]){
         scanf("%d", &M);
         if(M*N > MAX) printf("\n!\nERROR: MAX = %d value too low!!\n\n", M*N);
 
-        printf("\nEnter %d Elements to avg:\n", M*N);
+        printf("\nEnter %d Elements: \n", M*N);
         fflush(stdout);
         for(i=0; i<M*N; i++){
             scanf("%f", &A[i]);
@@ -42,7 +42,7 @@ int main(int argc, char* argv[]){
         for(i=0; i<N; i++) tavg += B[i];
         tavg /= N;
 
-        printf("\nThe final average computed in root = %f\n\n", tavg);
+        printf("\n Average computed in root = %f\n\n", tavg);
     }
 
     MPI_Finalize();
