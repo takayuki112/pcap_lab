@@ -20,10 +20,6 @@ __global__ void swapMinAheadOfMe(int* a, int N){
         }
         
         printf("Thread %d: Swapped %d with %d, coz i = %d and minidx = %d\n", i, a[i], a[minidx], i, minidx);
-        // for (int i = 0; i < N; i++) {
-        //     printf("%d ", a[i]);
-        // }
-        // printf("\n");
     }
 }
 
@@ -34,7 +30,6 @@ int main() {
         printf("%d ", h_a[i]);
     }
     printf("\n");
-    // int h_a[N] = {29, 10, 14, 37, 13, 6, 23, 12, 44, 19};
 
     int* d_a;
     cudaMalloc(&d_a, N * sizeof(int));
