@@ -27,16 +27,16 @@ int main(int argc, char *argv[]) {
         fgets(S2, MAX, stdin);
         S2[strcspn(S2, "\n")] = '\0';
 
-        if (strlen(S1) != strlen(S2)) {
-            printf("Error: Strings must be of the same length.\n");
-            MPI_Abort(MPI_COMM_WORLD, 1);
-        }
+        // if (strlen(S1) != strlen(S2)) {
+        //     printf("Error: Strings must be of the same length.\n");
+        //     MPI_Abort(MPI_COMM_WORLD, 1);
+        // }
 
-        str_len = strlen(S1);
-        if (strlen(S1) % size != 0) {
-            printf("Error: String length must be divisible by the number of processes.\n");
-            MPI_Abort(MPI_COMM_WORLD, 1);
-        }
+        // str_len = strlen(S1);
+        // if (strlen(S1) % size != 0) {
+        //     printf("Error: String length must be divisible by the number of processes.\n");
+        //     MPI_Abort(MPI_COMM_WORLD, 1);
+        // }
     }
 
     MPI_Bcast(&str_len, 1, MPI_INT, 0, MPI_COMM_WORLD);

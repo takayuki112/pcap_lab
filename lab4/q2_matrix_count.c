@@ -4,7 +4,7 @@
 
 #define MATRIX_SIZE 3
 
-int main(int argc, char* argv[]) {c
+int main(int argc, char* argv[]) {
     int rank, size, i, j, search_element;
     int matrix[MATRIX_SIZE][MATRIX_SIZE];
     int local_count = 0, total_count = 0;
